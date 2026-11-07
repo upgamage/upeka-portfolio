@@ -1,0 +1,117 @@
+/* ========================================
+   1. DESIGN TOKENS
+======================================== */
+
+:root {
+  /* Colors */
+  --color-background: #F5F4EF;
+  --color-surface: #FFFFFF;
+  --color-primary: #17243A;
+  --color-text: #30343B;
+  --color-muted: #737B87;
+  --color-accent: #A8BBD4;
+  --color-border: #E3E2DC;
+
+  /* Typography */
+  --font-primary: "Inter", system-ui, sans-serif;
+  --font-editorial: "Playfair Display", Georgia, serif;
+
+  /* Layout */
+  --container-width: 1200px;
+  --page-padding: 48px;
+  --section-spacing: 96px;
+
+  /* Spacing */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+
+  /* Borders */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+}
+
+/* ========================================
+   2. DARK THEME FOUNDATION
+======================================== */
+
+[data-theme="dark"] {
+  --color-background: #111827;
+  --color-surface: #1C2636;
+  --color-primary: #F5F4EF;
+  --color-text: #F5F4EF;
+  --color-muted: #AAB3C0;
+  --color-accent: #A8BBD4;
+  --color-border: #344154;
+}
+
+/* ========================================
+   3. GLOBAL RESET
+======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+  min-width: 320px;
+}
+
+/* ========================================
+   4. GLOBAL ELEMENTS
+======================================== */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* ========================================
+   5. RESPONSIVE FOUNDATION
+======================================== */
+
+@media (max-width: 1023px) {
+  :root {
+    --page-padding: 32px;
+    --section-spacing: 80px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --page-padding: 20px;
+    --section-spacing: 64px;
+  }
+}
