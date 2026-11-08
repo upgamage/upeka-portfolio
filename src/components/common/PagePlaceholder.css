@@ -1,0 +1,66 @@
+
+/* Temporary page layout */
+.page-placeholder {
+  min-height: 500px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* Page identifier */
+.page-label {
+  margin-bottom: 16px;
+
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Page heading */
+.page-placeholder h1 {
+  margin-bottom: 16px;
+
+  color: var(--color-primary);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+}
+
+/* Page description */
+.page-placeholder > p {
+  max-width: 600px;
+
+  color: var(--color-muted);
+  font-size: 1.1rem;
+}
+
+/* Temporary content notice */
+.placeholder-notice {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  margin-top: 40px;
+  padding: 20px 24px;
+
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.placeholder-notice p {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.placeholder-notice span {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}

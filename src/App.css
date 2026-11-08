@@ -1,3 +1,70 @@
-.app {
+
+/* ========================================
+   APPLICATION FOUNDATION
+======================================== */
+
+.app-layout {
+  width: 100%;
   min-height: 100vh;
+}
+
+/* Reusable content container */
+.container {
+  width: min(
+    calc(100% - (var(--page-padding) * 2)),
+    var(--container-width)
+  );
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ========================================
+   404 PAGE
+======================================== */
+
+.not-found {
+  min-height: 65vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.not-found h1 {
+  margin-bottom: 16px;
+
+  color: var(--color-primary);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+.not-found > p:not(.page-label) {
+  color: var(--color-muted);
+}
+
+.not-found-link {
+  display: inline-flex;
+
+  margin-top: 28px;
+  padding: 12px 22px;
+
+  background: var(--color-primary);
+  color: var(--color-background);
+
+  border-radius: var(--radius-sm);
+
+  transition: opacity 0.2s ease;
+}
+
+.not-found-link:hover {
+  opacity: 0.85;
+}
+
+.not-found-link:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
 }

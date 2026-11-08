@@ -1,8 +1,11 @@
+
 /* ========================================
-   1. DESIGN TOKENS
+   1. LIGHT THEME DESIGN TOKENS
 ======================================== */
 
 :root {
+  color-scheme: light;
+
   /* Colors */
   --color-background: #F5F4EF;
   --color-surface: #FFFFFF;
@@ -35,10 +38,12 @@
 }
 
 /* ========================================
-   2. DARK THEME FOUNDATION
+   2. DARK THEME DESIGN TOKENS
 ======================================== */
 
 [data-theme="dark"] {
+  color-scheme: dark;
+
   --color-background: #111827;
   --color-surface: #1C2636;
   --color-primary: #F5F4EF;
@@ -58,20 +63,36 @@
   box-sizing: border-box;
 }
 
+/* ========================================
+   4. DOCUMENT AND BODY
+======================================== */
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
+  min-width: 320px;
+  min-height: 100vh;
+
   font-family: var(--font-primary);
+  line-height: 1.6;
+
   background-color: var(--color-background);
   color: var(--color-text);
-  line-height: 1.6;
-  min-width: 320px;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+/* React application root */
+#root {
+  min-height: 100vh;
 }
 
 /* ========================================
-   4. GLOBAL ELEMENTS
+   5. GLOBAL ELEMENTS
 ======================================== */
 
 a {
@@ -81,7 +102,8 @@ a {
 
 button,
 input,
-textarea {
+textarea,
+select {
   font: inherit;
 }
 
@@ -94,12 +116,14 @@ img {
   max-width: 100%;
 }
 
-#root {
-  min-height: 100vh;
+/* Consistent keyboard focus */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
 }
 
 /* ========================================
-   5. RESPONSIVE FOUNDATION
+   6. RESPONSIVE FOUNDATION
 ======================================== */
 
 @media (max-width: 1023px) {
@@ -113,5 +137,20 @@ img {
   :root {
     --page-padding: 20px;
     --section-spacing: 64px;
+  }
+}
+
+/* ========================================
+   7. REDUCED MOTION ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
