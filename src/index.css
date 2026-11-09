@@ -35,6 +35,23 @@
   --radius-sm: 6px;
   --radius-md: 12px;
   --radius-lg: 20px;
+
+
+
+
+  /* Navigation and footer colors - Light theme */
+--nav-background: #17243A;
+--nav-text: #F5F4EF;
+--nav-muted: #C4CDDA;
+--nav-active-background: #A8BBD4;
+--nav-active-text: #17243A;
+--nav-hover-background: rgb(168 187 212 / 16%);
+--nav-border: rgb(255 255 255 / 12%);
+
+--footer-background: #17243A;
+--footer-heading: #F5F4EF;
+--footer-text: #C4CDDA;
+--footer-border: rgb(255 255 255 / 15%);
 }
 
 /* ========================================
@@ -51,6 +68,20 @@
   --color-muted: #AAB3C0;
   --color-accent: #A8BBD4;
   --color-border: #344154;
+
+  /* Navigation and footer colors - Dark theme */
+--nav-background: #111827;
+--nav-text: #F5F4EF;
+--nav-muted: #AAB3C0;
+--nav-active-background: #344154;
+--nav-active-text: #F5F4EF;
+--nav-hover-background: rgb(168 187 212 / 10%);
+--nav-border: #344154;
+
+--footer-background: #1C2636;
+--footer-heading: #F5F4EF;
+--footer-text: #AAB3C0;
+--footer-border: #344154;
 }
 
 /* ========================================
