@@ -64,7 +64,7 @@ function Contact() {
 
             <div>
               <h3>Email</h3>
-              <p>Email address will be added.</p>
+              <p>upekasamanjanagamage@gmail.com</p>
             </div>
           </div>
 

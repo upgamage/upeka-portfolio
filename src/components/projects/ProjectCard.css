@@ -1,0 +1,281 @@
+
+/* ========================================
+   PROJECT CARD
+======================================== */
+
+.project-card {
+  min-width: 0;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--color-surface);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+
+  border-color: var(--color-accent);
+
+  box-shadow: 0 12px 30px rgb(0 0 0 / 7%);
+}
+
+/* ========================================
+   PROJECT COVER
+======================================== */
+
+.project-cover {
+  position: relative;
+
+  min-height: 230px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  padding: 22px;
+
+  color: #F5F4EF;
+  background: #17243A;
+}
+
+/* Cover decorations */
+.project-cover::before,
+.project-cover::after {
+  content: "";
+
+  position: absolute;
+
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.project-cover::before {
+  width: 240px;
+  height: 240px;
+  top: -120px;
+  right: -70px;
+}
+
+.project-cover::after {
+  width: 180px;
+  height: 180px;
+  bottom: -110px;
+  left: -50px;
+}
+
+/* Individual project cover variations */
+.project-cover.stockmate {
+  background: linear-gradient(135deg, #17243A, #344C69);
+}
+
+.project-cover.astroscop {
+  background: linear-gradient(135deg, #10172C, #30265C);
+}
+
+.project-cover.expense-tracker {
+  background: linear-gradient(135deg, #183A3B, #315C62);
+}
+
+.project-cover.campus {
+  background: linear-gradient(135deg, #303D50, #536B7C);
+}
+
+/* Top cover information */
+.project-cover-top {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  right: 18px;
+  z-index: 1;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-category-label,
+.project-status {
+  padding: 5px 9px;
+
+  background: rgb(255 255 255 / 12%);
+  color: #F5F4EF;
+
+  border: 1px solid rgb(255 255 255 / 15%);
+  border-radius: 5px;
+
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+/* Central project icon */
+.project-cover-icon {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100px;
+  height: 100px;
+
+  background: rgb(255 255 255 / 8%);
+  color: #C4D5E8;
+
+  border: 1px solid rgb(255 255 255 / 15%);
+  border-radius: 24px;
+}
+
+.project-cover-name {
+  position: relative;
+  z-index: 1;
+
+  margin-top: 14px;
+
+  color: #F5F4EF;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* ========================================
+   PROJECT CONTENT
+======================================== */
+
+.project-card-content {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 24px;
+}
+
+.project-card-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.project-card-heading h2 {
+  color: var(--color-primary);
+  font-size: 1.3rem;
+  letter-spacing: -0.4px;
+}
+
+.featured-label {
+  padding: 4px 8px;
+
+  background: var(--color-background);
+  color: var(--color-muted);
+
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.project-description {
+  margin-top: 12px;
+
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* ========================================
+   TECHNOLOGY TAGS
+======================================== */
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin-top: 22px;
+}
+
+.technology-tag {
+  padding: 5px 9px;
+
+  background: var(--color-background);
+  color: var(--color-text);
+
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+
+  font-size: 0.72rem;
+}
+
+/* ========================================
+   PROJECT ACTIONS
+======================================== */
+
+.project-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+
+  margin-top: auto;
+  padding-top: 22px;
+}
+
+.project-action-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  color: var(--color-primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  transition: opacity 0.2s ease;
+}
+
+.project-action-link:hover {
+  opacity: 0.65;
+}
+
+/* ========================================
+   RESPONSIVE CARD
+======================================== */
+
+@media (max-width: 767px) {
+  .project-cover {
+    min-height: 200px;
+  }
+
+  .project-card-content {
+    padding: 20px;
+  }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .project-card {
+    transition: none;
+  }
+
+  .project-card:hover {
+    transform: none;
+  }
+}
